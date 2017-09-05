@@ -1,0 +1,37 @@
+/* --------
+general
+-------- */
+
+*{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Noto Serif', serif;
+  }
+
+
+/* --------
+navigation
+-------- */
+.navbar li a{
+  font-size: 16px;
+  font-weight: 300;
+}
+
+li.active a{
+  font-weight: 400;
+  font-size: 20px;
+}
+
+li a.nav-username{
+  font-weight: 700;
+}
+
+
+/* --------
+forms
+-------- */
+label{
+  font-weight: normal;
+}
