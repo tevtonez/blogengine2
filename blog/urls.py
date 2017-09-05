@@ -11,5 +11,5 @@ urlpatterns = [
   url(r'^post/(?P<pk>\d+)/edit/$', views.PostUpdateView.as_view(), name = 'post_edit'),
   url(r'^post/(?P<pk>\d+)/delete/$', views.PostDeleteView.as_view(), name = 'post_delete'),
   url(r'^drafts/$', views.DraftsListView.as_view(), name = 'post_draft_list'),
-
+  url(r'^post/(?P<pk>\d+)/comment/$', views.add_comment_to_post, name = 'add_comment_to_post'),
 ]
