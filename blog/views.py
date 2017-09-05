@@ -1,3 +1,4 @@
+from django.utils import timezone
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
 #from django.contrib.auth.decorators import login_required
@@ -5,7 +6,7 @@ from django.urls import reverse_lazy
 from django.views.generic import (TemplateView,
                                   ListView,
                                   DetailView,
-                                  CreatelView,
+                                  CreateView,
                                   UpdateView,
                                   DeleteView
 )
@@ -19,7 +20,7 @@ class AboutView(TemplateView):
 
 
 
-class PostListView(ListView)
+class PostListView(ListView):
   model = Post
 
   def get_queryset(self):
@@ -32,7 +33,7 @@ class PostDetailView(DetailView):
 
 
 
-class CreatePostView(LoginRequiredMixin, CreatelView):
+class CreatePostView(LoginRequiredMixin, CreateView):
   login_url = '/login/'
   redirect_field_name = 'blog/post_detail.html'
   form_class = PostForm
